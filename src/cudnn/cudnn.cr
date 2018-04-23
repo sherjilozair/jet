@@ -15,11 +15,19 @@ module CuDNN
     end
   end
 
-  class TensorDescriptor
-    getter :td
+  class Tensor4D
+    getter :desc
 
-    def initialize
-      check_success(LibCuDNN.create_tensor_descriptor(out @td))
+    def initialize(
+      @format : LibCuDNN::TensorFormatT,
+      @data_type : LibCuDNN::DataTypeT,
+      @n : LibC::Int,
+      @c : LibC::Int,
+      @h : LibC::Int,
+      @w : LibC::Int
+    )
+      check_success(LibCuDNN.create_tensor_descriptor(out @desc))
+      check_success(LibCuDNN.set_tensor4d_descriptor(@desc, @format, @data_type, @n, @c, @h, @w))
     end
 
     def check_success(status)
@@ -27,7 +35,7 @@ module CuDNN
     end
 
     def destroy
-      LibCuDNN.destroy_tensor_descriptor(@td)
+      LibCuDNN.destroy_tensor_descriptor(@desc)
     end
   end
 end

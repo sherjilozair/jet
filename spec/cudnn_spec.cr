@@ -10,8 +10,9 @@ describe CuDNN do
   end
 
   it "creates a tensor descriptor" do
-    td = CuDNN::TensorDescriptor.new
-    td.td.should be_a(LibCuDNN::TensorDescriptorT)
-    td.destroy
+    t = CuDNN::Tensor4D.new(LibCuDNN::TensorFormatT::TensorNhwc,
+      LibCuDNN::DataTypeT::DataFloat, 8, 64, 3, 3)
+    t.desc.should be_a(LibCuDNN::TensorDescriptorT)
+    t.destroy
   end
 end
