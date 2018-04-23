@@ -1,6 +1,6 @@
 require "./spec_helper"
 
-describe Cudnn do
+describe CuDNN do
   # TODO: Write tests
 
   it "works" do
