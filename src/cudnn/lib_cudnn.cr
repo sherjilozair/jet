@@ -1,5 +1,5 @@
 @[Link("cudnn")]
-lib LibCUDNN
+lib LibCuDNN
   # Contants
 
   MAJOR                                     =    7
