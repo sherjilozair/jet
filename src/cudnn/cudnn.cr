@@ -1,4 +1,6 @@
 module CuDNN
+  extend self
+
   class Handler
     getter :handler
 
@@ -37,5 +39,18 @@ module CuDNN
     def destroy
       LibCuDNN.destroy_tensor_descriptor(@desc)
     end
+  end
+
+  def check_success(status)
+    raise status.to_s unless LibCUDA::ErrorT::Success == status
+  end
+
+  def malloc(size)
+    check_success(LibCUDA.malloc(out ptr, size))
+    return ptr
+  end
+
+  def free(p)
+    check_success(LibCUDA.free(p))
   end
 end
