@@ -1,9 +1,11 @@
 require "./spec_helper"
 
-describe Cudnn do
+describe CuDNN do
   # TODO: Write tests
 
-  it "works" do
-    false.should eq(true)
+  it "creates a handler" do
+    handler = CuDNN::Handler.new
+    handler.handler.should be_a(LibCuDNN::HandleT)
+    handler.destroy
   end
 end
