@@ -1,6 +1,6 @@
 # cudnn
 
-TODO: Write a description here
+[WIP] Crystal bindings for NVIDIA CuDNN.
 
 ## Installation
 
@@ -9,7 +9,7 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   cudnn:
-    github: [your-github-name]/cudnn
+    github: sherjilozair/cudnn.cr
 ```
 
 ## Usage
@@ -17,12 +17,6 @@ dependencies:
 ```crystal
 require "cudnn"
 ```
-
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
 
 ## Contributing
 
@@ -34,4 +28,5 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [[your-github-name]](https://github.com/[your-github-name]) Sherjil Ozair - creator, maintainer
+- [Sherjil Ozair](https://github.com/sherjilozair) Sherjil Ozair - creator, maintainer
+- [Bar Hofesh](https://github.com/bararchy) Bar Hofesh - creator, maintainer
