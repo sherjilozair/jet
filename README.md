@@ -35,3 +35,4 @@ TODO: Write development instructions here
 ## Contributors
 
 - [sherjilozair](https://github.com/sherjilozair) Sherjil Ozair - creator, maintainer
+- [bararchy](https://github.com/bararchy) Bar Hofesh - collaborator
