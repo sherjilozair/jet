@@ -52,20 +52,20 @@ lib LibCuDNN
 
   # Enums
   enum StatusT
-    StatusSuccess                    =  0
-    StatusNotInitialized             =  1
-    StatusAllocFailed                =  2
-    StatusBadParam                   =  3
-    StatusInternalError              =  4
-    StatusInvalidValue               =  5
-    StatusArchMismatch               =  6
-    StatusMappingError               =  7
-    StatusExecutionFailed            =  8
-    StatusNotSupported               =  9
-    StatusLicenseError               = 10
-    StatusRuntimePrerequisiteMissing = 11
-    StatusRuntimeInProgress          = 12
-    StatusRuntimeFpOverflow          = 13
+    Success                    =  0
+    NotInitialized             =  1
+    AllocFailed                =  2
+    BadParam                   =  3
+    InternalError              =  4
+    InvalidValue               =  5
+    ArchMismatch               =  6
+    MappingError               =  7
+    ExecutionFailed            =  8
+    NotSupported               =  9
+    LicenseError               = 10
+    RuntimePrerequisiteMissing = 11
+    RuntimeInProgress          = 12
+    RuntimeFpOverflow          = 13
   end
 
   enum ErrQueryModeT
@@ -81,29 +81,29 @@ lib LibCuDNN
   end
 
   enum TensorFormatT
-    TensorNchw      = 0
-    TensorNhwc      = 1
-    TensorNchwVectC = 2
+    Nchw      = 0
+    Nhwc      = 1
+    NchwVectC = 2
   end
 
   enum DataTypeT
-    DataFloat   = 0
-    DataDouble  = 1
-    DataHalf    = 2
-    DataInt8    = 3
-    DataInt32   = 4
-    DataInt8x4  = 5
-    DataUint8   = 6
-    DataUint8x4 = 7
+    Float   = 0
+    Double  = 1
+    Half    = 2
+    Int8    = 3
+    Int32   = 4
+    Int8x4  = 5
+    Uint8   = 6
+    Uint8x4 = 7
   end
 
   enum OpTensorOpT
-    OpTensorAdd  = 0
-    OpTensorMul  = 1
-    OpTensorMin  = 2
-    OpTensorMax  = 3
-    OpTensorSqrt = 4
-    OpTensorNot  = 5
+    Add  = 0
+    Mul  = 1
+    Min  = 2
+    Max  = 3
+    Sqrt = 4
+    Not  = 5
   end
 
   enum NanPropagationT
@@ -112,20 +112,20 @@ lib LibCuDNN
   end
 
   enum ReduceTensorOpT
-    ReduceTensorAdd        = 0
-    ReduceTensorMul        = 1
-    ReduceTensorMin        = 2
-    ReduceTensorMax        = 3
-    ReduceTensorAmax       = 4
-    ReduceTensorAvg        = 5
-    ReduceTensorNorm1      = 6
-    ReduceTensorNorm2      = 7
-    ReduceTensorMulNoZeros = 8
+    Add        = 0
+    Mul        = 1
+    Min        = 2
+    Max        = 3
+    Amax       = 4
+    Avg        = 5
+    Norm1      = 6
+    Norm2      = 7
+    MulNoZeros = 8
   end
 
   enum ReduceTensorIndicesT
-    ReduceTensorNoIndices        = 0
-    ReduceTensorFlattenedIndices = 1
+    NoIndices        = 0
+    FlattenedIndices = 1
   end
 
   enum IndicesTypeT

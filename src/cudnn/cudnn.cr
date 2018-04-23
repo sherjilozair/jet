@@ -7,7 +7,7 @@ module CuDNN
     end
 
     def check_success(status)
-      raise status.to_s unless LibCuDNN::StatusT.new(0) == status
+      raise status.to_s unless LibCuDNN::StatusT::Success == status
     end
 
     def destroy
@@ -31,7 +31,7 @@ module CuDNN
     end
 
     def check_success(status)
-      raise status.to_s unless LibCuDNN::StatusT.new(0) == status
+      raise status.to_s unless LibCuDNN::StatusT::Success == status
     end
 
     def destroy
