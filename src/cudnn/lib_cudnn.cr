@@ -1,15 +1,15 @@
 @[Link("cudnn")]
 lib LibCuDNN
   # Contants
-  MAJOR                                     =    7
-  MINOR                                     =    1
-  PATCHLEVEL                                =    2
-  DIM_MAX                                   =    8
-  LRN_MIN_N                                 =    1
-  LRN_MAX_N                                 =   16
-  LRN_MIN_K                                 = 1e-5
-  LRN_MIN_BETA                              = 0.01
-  BN_MIN_EPSILON                            = 1e-5
+  MAJOR          =    7
+  MINOR          =    1
+  PATCHLEVEL     =    2
+  DIM_MAX        =    8
+  LRN_MIN_N      =    1
+  LRN_MAX_N      =   16
+  LRN_MIN_K      = 1e-5
+  LRN_MIN_BETA   = 0.01
+  BN_MIN_EPSILON = 1e-5
 
   # Alias
   alias CallbackT = (SeverityT, Void*, DebugT*, LibC::Char* -> Void)
