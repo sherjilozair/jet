@@ -1,6 +1,4 @@
 module Jet
-  extend self
-
   class Tensor
     property :desc
 
