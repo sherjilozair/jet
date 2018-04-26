@@ -1,6 +1,6 @@
-# cudnn
+# Jet
 
-[WIP] Tensor library for Crystal powered by CUDA and CuDNN
+Jet is a tensor library for Crystal powered by CUDA and CuDNN.
 
 ## Installation
 
