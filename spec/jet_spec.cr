@@ -18,4 +18,10 @@ describe Jet do
     ptr.is_a?(Pointer(Void)).should eq true
     Jet.free(ptr)
   end
+
+  it "creates an n-dim tensor" do
+    t = Jet::Tensor.new(LibCuDNN::DataTypeT::Float, [2, 3, 5, 7])
+    t.desc.should be_a(LibCuDNN::TensorDescriptorT)
+    t.destroy
+  end
 end
