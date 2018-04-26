@@ -1,6 +1,6 @@
 # cudnn
 
-[WIP] Crystal bindings for NVIDIA CuDNN.
+[WIP] Tensor library for Crystal powered by CUDA and CuDNN
 
 ## Installation
 
@@ -9,18 +9,18 @@ Add this to your application's `shard.yml`:
 ```yaml
 dependencies:
   cudnn:
-    github: sherjilozair/cudnn.cr
+    gitihub: sherjilozair/jet
 ```
 
 ## Usage
 
 ```crystal
-require "cudnn"
+require "jet"
 ```
 
 ## Contributing
 
-1. Fork it ( https://github.com/sherjilozair/cudnn/fork )
+1. Fork it ( https://github.com/sherjilozair/jet/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)

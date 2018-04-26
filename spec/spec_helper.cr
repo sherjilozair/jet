@@ -1,3 +1,3 @@
 require "spec"
-require "../src/cudnn"
-require "../src/cudnn/lib_cuda"
+require "../src/jet"
+require "../src/jet/lib_cuda"

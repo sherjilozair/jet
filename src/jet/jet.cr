@@ -1,4 +1,4 @@
-module CuDNN
+module Jet
   extend self
 
   class Handler
