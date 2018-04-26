@@ -8,7 +8,7 @@ module CuDNN
       check_success(LibCuDNN.create(out @handler))
     end
 
-    def check_success(status)
+    def check_success(status : LibCuDNN::StatusT)
       raise status.to_s unless LibCuDNN::StatusT::Success == status
     end
 
@@ -32,7 +32,7 @@ module CuDNN
       check_success(LibCuDNN.set_tensor4d_descriptor(@desc, @format, @data_type, @n, @c, @h, @w))
     end
 
-    def check_success(status)
+    def check_success(status : LibCuDNN::StatusT)
       raise status.to_s unless LibCuDNN::StatusT::Success == status
     end
 
@@ -41,16 +41,16 @@ module CuDNN
     end
   end
 
-  def check_success(status)
+  def check_success(status : LibCUDA::ErrorT)
     raise status.to_s unless LibCUDA::ErrorT::Success == status
   end
 
-  def malloc(size)
+  def malloc(size) : Pointer(Void)
     check_success(LibCUDA.malloc(out ptr, size))
-    return ptr
+    ptr
   end
 
-  def free(p)
-    check_success(LibCUDA.free(p))
+  def free(ptr)
+    check_success(LibCUDA.free(ptr))
   end
 end
